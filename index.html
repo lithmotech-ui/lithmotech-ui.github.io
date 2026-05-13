@@ -8,374 +8,22 @@
 
   <meta name="description" content="Lithmo Technologies Private Limited is developing programmable liquid handling robots for Indian diagnostic, biotech, academic, and research laboratories." />
 
-  <style>
-    :root {
-      --bg: #f7fafc;
-      --text: #111827;
-      --muted: #4b5563;
-      --primary: #0f766e;
-      --primary-dark: #115e59;
-      --card: #ffffff;
-      --border: #e5e7eb;
-      --soft: #ecfdf5;
-      --dark: #0f172a;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-
-    header {
-      background: rgba(255, 255, 255, 0.92);
-      border-bottom: 1px solid var(--border);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      backdrop-filter: blur(10px);
-    }
-
-    .nav {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 16px 24px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-weight: 800;
-      letter-spacing: -0.02em;
-    }
-
-    .logo {
-      width: 38px;
-      height: 38px;
-      border-radius: 12px;
-      background: linear-gradient(135deg, #0f766e, #164e63);
-      display: grid;
-      place-items: center;
-      color: white;
-      font-weight: 800;
-      font-size: 20px;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 20px;
-      font-size: 14px;
-    }
-
-    .nav-links a {
-      color: var(--muted);
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    .nav-links a:hover {
-      color: var(--primary);
-    }
-
-    .hero {
-      background:
-        radial-gradient(circle at top right, rgba(15, 118, 110, 0.14), transparent 35%),
-        linear-gradient(180deg, #ffffff, #f7fafc);
-    }
-
-    .hero-inner {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 86px 24px 72px;
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 40px;
-      align-items: center;
-    }
-
-    .badge {
-      display: inline-block;
-      padding: 8px 14px;
-      border-radius: 999px;
-      background: var(--soft);
-      color: var(--primary-dark);
-      font-size: 14px;
-      font-weight: 700;
-      margin-bottom: 22px;
-    }
-
-    h1 {
-      font-size: clamp(38px, 5vw, 64px);
-      line-height: 1.05;
-      margin: 0 0 22px;
-      letter-spacing: -0.055em;
-      color: var(--dark);
-    }
-
-    .hero p {
-      font-size: 20px;
-      color: var(--muted);
-      max-width: 720px;
-      margin: 0 0 30px;
-    }
-
-    .buttons {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
-
-    .button {
-      display: inline-block;
-      padding: 13px 18px;
-      border-radius: 12px;
-      text-decoration: none;
-      font-weight: 700;
-      border: 1px solid transparent;
-    }
-
-    .button.primary {
-      background: var(--primary);
-      color: white;
-    }
-
-    .button.primary:hover {
-      background: var(--primary-dark);
-    }
-
-    .button.secondary {
-      background: white;
-      color: var(--dark);
-      border-color: var(--border);
-    }
-
-    .visual-card {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 26px;
-      padding: 28px;
-      box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
-    }
-
-    .robot-box {
-      min-height: 260px;
-      border-radius: 20px;
-      background:
-        linear-gradient(135deg, rgba(15, 118, 110, 0.12), rgba(22, 78, 99, 0.12)),
-        #f8fafc;
-      border: 1px solid var(--border);
-      display: grid;
-      place-items: center;
-      text-align: center;
-      padding: 24px;
-    }
-
-    .robot-box h3 {
-      margin: 0 0 8px;
-      color: var(--dark);
-      font-size: 24px;
-    }
-
-    .robot-box p {
-      font-size: 15px;
-      margin: 0;
-      color: var(--muted);
-    }
-
-    section {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 70px 24px;
-    }
-
-    .section-title {
-      max-width: 760px;
-      margin-bottom: 34px;
-    }
-
-    h2 {
-      font-size: 34px;
-      line-height: 1.15;
-      margin: 0 0 12px;
-      color: var(--dark);
-      letter-spacing: -0.035em;
-    }
-
-    .section-title p {
-      font-size: 18px;
-      color: var(--muted);
-      margin: 0;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 24px;
-      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
-    }
-
-    .card h3 {
-      margin: 0 0 10px;
-      font-size: 20px;
-      color: var(--dark);
-    }
-
-    .card p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 16px;
-    }
-
-    .two-col {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 22px;
-      align-items: start;
-    }
-
-    ul {
-      margin: 0;
-      padding-left: 20px;
-      color: var(--muted);
-    }
-
-    li {
-      margin-bottom: 9px;
-    }
-
-    .dark-section {
-      background: var(--dark);
-      color: white;
-      margin-top: 40px;
-    }
-
-    .dark-section section {
-      padding-top: 76px;
-      padding-bottom: 76px;
-    }
-
-    .dark-section h2,
-    .dark-section h3 {
-      color: white;
-    }
-
-    .dark-section p,
-    .dark-section li {
-      color: #cbd5e1;
-    }
-
-    .founder {
-      display: grid;
-      grid-template-columns: 0.8fr 1.2fr;
-      gap: 24px;
-      align-items: center;
-    }
-
-    .founder-photo {
-      min-height: 280px;
-      border-radius: 24px;
-      background:
-        linear-gradient(135deg, rgba(15, 118, 110, 0.18), rgba(22, 78, 99, 0.18)),
-        #ffffff;
-      border: 1px solid var(--border);
-      display: grid;
-      place-items: center;
-      color: var(--primary-dark);
-      font-size: 72px;
-      font-weight: 800;
-    }
-
-    .contact-box {
-      background: white;
-      border-radius: 24px;
-      padding: 30px;
-      border: 1px solid var(--border);
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 24px;
-      align-items: center;
-    }
-
-    .contact-details p {
-      margin: 0 0 10px;
-      color: var(--muted);
-    }
-
-    .contact-details strong {
-      color: var(--dark);
-    }
-
-    a {
-      color: var(--primary);
-    }
-
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 24px;
-      text-align: center;
-      color: #6b7280;
-      font-size: 14px;
-      background: white;
-    }
-
-    @media (max-width: 880px) {
-      .hero-inner,
-      .two-col,
-      .founder,
-      .contact-box {
-        grid-template-columns: 1fr;
-      }
-
-      .grid {
-        grid-template-columns: 1fr;
-      }
-
-      .nav-links {
-        display: none;
-      }
-
-      section {
-        padding: 54px 20px;
-      }
-
-      .hero-inner {
-        padding: 64px 20px 54px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
   <header>
     <nav class="nav">
-      <div class="brand">
-        <div class="logo">L</div>
+      <a class="brand" href="index.html">
+        <div class="logo-mark">L</div>
         <div>Lithmo Technologies</div>
-      </div>
+      </a>
 
       <div class="nav-links">
-        <a href="#product">Product</a>
-        <a href="#applications">Applications</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+        <a href="product.html">Product</a>
+        <a href="applications.html">Applications</a>
+        <a href="about.html">About</a>
+        <a class="nav-cta" href="contact.html">Contact</a>
       </div>
     </nav>
   </header>
@@ -388,18 +36,18 @@
 
           <h1>Affordable lab automation for Indian laboratories.</h1>
 
-          <p>
+          <p class="hero-text">
             Lithmo Technologies Private Limited is developing programmable liquid handling robots for diagnostic, biotech, academic, and research laboratories.
           </p>
 
           <div class="buttons">
-            <a class="button primary" href="mailto:founder@lithmotech.com">Contact Us</a>
-            <a class="button secondary" href="#product">View Product</a>
+            <a class="button primary" href="contact.html">Contact Lithmo</a>
+            <a class="button secondary" href="product.html">View Product</a>
           </div>
         </div>
 
         <div class="visual-card">
-          <div class="robot-box">
+          <div class="visual-inner">
             <div>
               <h3>Programmable Liquid Handling</h3>
               <p>
@@ -411,15 +59,15 @@
       </div>
     </div>
 
-    <section id="problem">
+    <section>
       <div class="section-title">
-        <h2>The problem we are solving</h2>
+        <h2>The problem</h2>
         <p>
           Many Indian laboratories still depend heavily on manual pipetting for repetitive workflows, while imported automation systems remain expensive and inaccessible for many institutions.
         </p>
       </div>
 
-      <div class="grid">
+      <div class="grid-3">
         <div class="card">
           <h3>Manual workload</h3>
           <p>
@@ -443,7 +91,7 @@
       </div>
     </section>
 
-    <section id="solution">
+    <section>
       <div class="section-title">
         <h2>Our solution</h2>
         <p>
@@ -451,53 +99,31 @@
         </p>
       </div>
 
-      <div class="two-col">
+      <div class="grid-2">
         <div class="card">
-          <h3>What Lithmo is building</h3>
+          <h3>Product under development</h3>
           <p>
             Our first product is a prototype-stage liquid handling platform intended to automate routine pipetting workflows across common laboratory formats such as tubes, tip racks, and microplates.
           </p>
         </div>
 
         <div class="card">
-          <h3>How it helps labs</h3>
+          <h3>Designed for usability</h3>
           <p>
-            The system is being designed to reduce repetitive manual work, improve workflow consistency, and make programmable automation accessible to a wider base of Indian laboratories.
+            The system is being designed to support software-controlled protocols and future workflow creation tools for users who may not have programming expertise.
           </p>
         </div>
       </div>
-    </section>
 
-    <section id="product">
-      <div class="section-title">
-        <h2>Product under development</h2>
-        <p>
-          Lithmo’s first product is a programmable liquid handling robot currently in MVP/prototype development.
-        </p>
-      </div>
-
-      <div class="two-col">
-        <div class="card">
-          <h3>Planned capabilities</h3>
-          <ul>
-            <li>Programmable X-Y-Z robotic motion</li>
-            <li>Automated pipette positioning</li>
-            <li>Software-controlled liquid transfer workflows</li>
-            <li>Support for routine microplate and tube-based workflows</li>
-            <li>Future user-friendly protocol builder for non-programmers</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Current status</h3>
-          <p>
-            Lithmo is currently developing its MVP and is open to incubation support, grant-backed product development, pilot collaborations, and early laboratory discussions.
-          </p>
-        </div>
+      <div class="feature-list">
+        <div class="feature-pill">Programmable X-Y-Z robotic motion</div>
+        <div class="feature-pill">Automated pipette positioning</div>
+        <div class="feature-pill">Microplate and tube workflow support</div>
+        <div class="feature-pill">Future drag-and-drop protocol builder</div>
       </div>
     </section>
 
-    <section id="applications">
+    <section>
       <div class="section-title">
         <h2>Intended applications</h2>
         <p>
@@ -505,25 +131,31 @@
         </p>
       </div>
 
-      <div class="grid">
+      <div class="grid-3">
         <div class="card">
           <h3>Diagnostic labs</h3>
-          <p>Sample preparation, reagent transfer, assay setup, and repeatable plate-based workflows.</p>
+          <p>
+            Sample preparation, reagent transfer, assay setup, and repeatable plate-based workflows.
+          </p>
         </div>
 
         <div class="card">
           <h3>Biotech labs</h3>
-          <p>Routine pipetting, serial dilution, reagent dispensing, molecular biology preparation, and screening workflows.</p>
+          <p>
+            Routine pipetting, serial dilution, reagent dispensing, molecular biology preparation, and screening workflows.
+          </p>
         </div>
 
         <div class="card">
           <h3>Academic research</h3>
-          <p>Affordable automation for university labs, research groups, and early-stage life science facilities.</p>
+          <p>
+            Affordable automation for university labs, research groups, and early-stage life science facilities.
+          </p>
         </div>
       </div>
     </section>
 
-    <div class="dark-section">
+    <div class="dark-band">
       <section>
         <div class="section-title">
           <h2>Why Lithmo?</h2>
@@ -532,73 +164,57 @@
           </p>
         </div>
 
-        <div class="grid">
-          <div class="card" style="background:#111827; border-color:#334155;">
+        <div class="grid-3">
+          <div class="card">
             <h3>India-focused</h3>
-            <p>Designed around the needs, budgets, and operational realities of Indian laboratories.</p>
+            <p>
+              Designed around the needs, budgets, and operational realities of Indian laboratories.
+            </p>
           </div>
 
-          <div class="card" style="background:#111827; border-color:#334155;">
+          <div class="card">
             <h3>Programmable</h3>
-            <p>Built for flexible workflows rather than a rigid single-use automation setup.</p>
+            <p>
+              Built for flexible workflows rather than rigid, single-use automation.
+            </p>
           </div>
 
-          <div class="card" style="background:#111827; border-color:#334155;">
+          <div class="card">
             <h3>Founder-led</h3>
-            <p>Led by a biotechnology researcher with direct understanding of laboratory workflows.</p>
+            <p>
+              Led by a biotechnology researcher with direct understanding of laboratory workflows.
+            </p>
           </div>
         </div>
       </section>
     </div>
 
-    <section id="about">
-      <div class="founder">
-        <div class="founder-photo">AB</div>
-
-        <div>
-          <div class="section-title">
-            <h2>About the founder</h2>
-            <p>
-              Lithmo Technologies is founded by <strong>Dr. Amit Bhardwaj</strong>, a biotechnology researcher with experience in biological research, laboratory workflows, computational biology, and automation-driven product development.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Company vision</h3>
-            <p>
-              Lithmo aims to make laboratory automation accessible to a wider base of Indian laboratories by building affordable, programmable, and locally relevant robotics platforms.
-            </p>
-          </div>
-        </div>
+    <section>
+      <div class="section-title center">
+        <h2>Open to incubation, grants, pilots, and partnerships</h2>
+        <p>
+          Lithmo is currently developing its MVP and is open to incubation support, grant-backed product development, pilot collaborations, and early laboratory discussions.
+        </p>
       </div>
-    </section>
 
-    <section id="contact">
-      <div class="contact-box">
-        <div>
-          <h2>Contact Lithmo</h2>
-          <p>
-            We are open to incubation, grant support, pilot collaborations, early product discussions, and strategic partnerships.
-          </p>
-
-          <div class="buttons">
-            <a class="button primary" href="mailto:founder@lithmotech.com">Email Founder</a>
-          </div>
-        </div>
-
-        <div class="contact-details">
-          <p><strong>Company:</strong><br />Lithmo Technologies Private Limited</p>
-          <p><strong>CIN:</strong><br />U46596HR2026PTC145002</p>
-          <p><strong>Location:</strong><br />Faridabad / Delhi NCR, India</p>
-          <p><strong>Email:</strong><br /><a href="mailto:founder@lithmotech.com">founder@lithmotech.com</a></p>
-          <p><strong>Website:</strong><br />www.lithmotech.com</p>
-        </div>
+      <div class="buttons" style="justify-content:center;">
+        <a class="button primary" href="contact.html">Send Inquiry</a>
+        <a class="button secondary" href="about.html">About Lithmo</a>
       </div>
     </section>
   </main>
 
-  <footer>
-    © 2026 Lithmo Technologies Private Limited. All rights reserved.
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>© 2026 Lithmo Technologies Private Limited. All rights reserved.</div>
+
+      <div class="footer-links">
+        <a href="product.html">Product</a>
+        <a href="applications.html">Applications</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
   </footer>
 </body>
 </html>
